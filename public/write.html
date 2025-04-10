@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wanderlust | Write Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+
+    <!-- 🌐 Navbar -->
+    <header class="fixed w-full bg-white shadow z-50">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-bold flex items-center gap-2">
+          <img src="logo.png" class="h-6" alt="Logo" /> Wanderlust
+        </a>
+        <nav class="hidden md:flex space-x-6 font-medium">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="index.html#blogs" class="hover:text-blue-600">Explore</a>
+          <a href="#" class="hover:text-blue-600">Partners</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 📝 Blog Form -->
+    <main class="pt-28 pb-20 max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6 text-center">Write a New Blog</h2>
+      <form id="blogForm" class="space-y-6 bg-white p-6 rounded-xl shadow" enctype="multipart/form-data">
+        <div>
+          <label for="title" class="block font-medium mb-1">Title</label>
+          <input type="text" id="title"  name="title" required class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-600"/>
+        </div>
+        <div>
+          <label for="author" class="block font-medium mb-1">Author Name</label>
+          <input type="text" id="author"  name="author" required class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-600"/>
+        </div>
+        <div>
+          <label for="image" class="block font-medium mb-1">Upload Image</label>
+          <input type="file" id="image" name="image" accept="image/*"  required class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-600" />
+        </div>
+        <div>
+          <label for="description" class="block font-medium mb-1">Short Description</label>
+          <textarea id="description" name="description" required rows="3" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-600"></textarea>
+        </div>
+        <div>
+          <label for="content" class="block font-medium mb-1">Blog Content</label>
+          <textarea id="content" name="content" required rows="6" class="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-600"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded">Post Blog</button>
+        </div>
+      </form>
+    </main>
+
+    <!-- 🔧 Script -->
+    <script src="js/submitBlog.js"></script>
+  </body>
+</html>
