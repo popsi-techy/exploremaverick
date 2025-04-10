@@ -7,12 +7,14 @@ const cors = require('cors');
 const app = express();
 const PORT = 3000;
 
+
 // Middlewares
 app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 app.use('/blogs', express.static(path.join(__dirname, 'blogs')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
+
 
 // Create folders if not exist
 ['blogs', 'images'].forEach((folder) => {
@@ -66,6 +68,8 @@ app.get('/blog/:id', (req, res) => {
     res.status(404).json({ error: 'Blog not found' });
   }
 });
+
+
 
 // Start server
 app.listen(PORT, () => {
