@@ -9,8 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
+    "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "fs": "^0.0.1-security",
@@ -18,5 +18,14 @@
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/popsi-techy/exploremaverick.git"
+  },
+  "bugs": {
+    "url": "https://github.com/popsi-techy/exploremaverick/issues"
+  },
+  "homepage": "https://github.com/popsi-techy/exploremaverick#readme",
+  "description": ""
 }
